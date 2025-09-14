@@ -1,0 +1,179 @@
+{
+    "bart_cassidy": {
+      "id": "bart_cassidy",
+      "name": "Bart Cassidy",
+      "description": {
+        "en": "Every time he loses a life point, he draws a card from the deck.",
+        "it": "Ogni volta che perde un punto vita, pesca immediatamente una carta dal mazzo."
+      },
+      "life_points": 4,
+      "ability": { "type": "draw_on_damage", "amount": 1 }
+    },
+    "black_jack": {
+      "id": "black_jack",
+      "name": "Black Jack",
+      "description": {
+        "en": "During his draw phase (phase 1), he reveals the second card he draws. If it's a Heart or Diamond, he draws an extra card.",
+        "it": "Nella fase di pesca (fase 1), rivela la seconda carta. Se è a Cuori o a Quadri, ne pesca una in più."
+      },
+      "life_points": 4,
+      "ability": {
+        "type": "draw_extra_on_seed",
+        "seed_required": ["cuori", "quadri"],
+        "draw_amount": 1
+      }
+    },
+    "calamity_janet": {
+      "id": "calamity_janet",
+      "name": "Calamity Janet",
+      "description": {
+        "en": "She can use 'Bang!' cards as 'Missed!' cards and vice versa.",
+        "it": "Può usare le carte 'Bang!' come 'Mancato!' e viceversa."
+      },
+      "life_points": 4,
+      "ability": {
+        "type": "card_substitute",
+        "card1": "bang",
+        "card2": "mancato"
+      }
+    },
+    "el_gringo": {
+      "id": "el_gringo",
+      "name": "El Gringo",
+      "description": {
+        "en": "Every time he loses a life point, he steals a random card from the hand of the player who hurt him.",
+        "it": "Ogni volta che perde una vita, ruba una carta a caso dalla mano del giocatore che l'ha ferito."
+      },
+      "life_points": 3,
+      "ability": {
+        "type": "steal_on_damage",
+        "source": "damaging_player",
+        "amount": 1
+      }
+    },
+    "jesse_jones": {
+      "id": "jesse_jones",
+      "name": "Jesse Jones",
+      "description": {
+        "en": "In his draw phase (phase 1), he can draw his first card from a player's hand and the second from the deck.",
+        "it": "Nella fase di pesca (fase 1), può pescare la prima carta dalla mano di un giocatore a sua scelta e la seconda dal mazzo."
+      },
+      "life_points": 4,
+      "ability": { "type": "draw_from_hand", "amount": 1 }
+    },
+    "jourdonnais": {
+      "id": "jourdonnais",
+      "name": "Jourdonnais",
+      "description": {
+        "en": "He has an automatic 'Barrel' (Barrel). He draws a card and if it's a Heart, he dodges the shot.",
+        "it": "Ha un 'Barile' automatico. Quando subisce un 'Bang!', pesca una carta: se è a Cuori, schiva il colpo."
+      },
+      "life_points": 4,
+      "ability": { "type": "automatic_barrel" }
+    },
+    "kit_carlson": {
+      "id": "kit_carlson",
+      "name": "Kit Carlson",
+      "description": {
+        "en": "In his draw phase (phase 1), he draws 3 cards, chooses 2 to keep, and puts the third back on top of the deck.",
+        "it": "Nella fase di pesca (fase 1), pesca 3 carte, ne sceglie 2 da tenere e rimette la terza in cima al mazzo."
+      },
+      "life_points": 4,
+      "ability": {
+        "type": "draw_and_discard",
+        "draw_amount": 3,
+        "keep_amount": 2,
+        "discard_location": "deck_top"
+      }
+    },
+    "lucky_duke": {
+      "id": "lucky_duke",
+      "name": "Lucky Duke",
+      "description": {
+        "en": "Every time on blue cards he has to draw a card, he draws two and chooses one to keep.",
+        "it": "Ogni volta che deve estrarre una carta, ne pesca due e sceglie quale tenere."
+      },
+      "life_points": 4,
+      "ability": { "type": "draw_twice_and_choose", "draw_amount": 2, "keep_amount": 1 }
+    },
+    "paul_regret": {
+      "id": "paul_regret",
+      "name": "Paul Regret",
+      "description": {
+        "en": "All other players see him at a distance of +1.",
+        "it": "Gli altri giocatori lo vedono a distanza +1."
+      },
+      "life_points": 3,
+      "ability": { "type": "range_modifier_defense", "distance": 1 }
+    },
+    "pedro_ramirez": {
+      "id": "pedro_ramirez",
+      "name": "Pedro Ramirez",
+      "description": {
+        "en": "In his draw phase (phase 1), he can draw his first card from the discard pile and the second from the deck.",
+        "it": "Nella fase di pesca (fase 1), può pescare la prima carta dalla pila degli scarti e la seconda dal mazzo."
+      },
+      "life_points": 4,
+      "ability": { "type": "draw_from_discard_pile", "amount": 1 }
+    },
+    "rose_doolan": {
+      "id": "rose_doolan",
+      "name": "Rose Doolan",
+      "description": {
+        "en": "She sees all other players at a distance of -1.",
+        "it": "Vede tutti gli altri giocatori a distanza -1."
+      },
+      "life_points": 4,
+      "ability": { "type": "range_modifier_offense", "range": -1 }
+    },
+    "sid_ketchum": {
+      "id": "sid_ketchum",
+      "name": "Sid Ketchum",
+      "description": {
+        "en": "He can discard 2 cards to regain 1 life point.",
+        "it": "Può scartare 2 carte per recuperare una vita."
+      },
+      "life_points": 4,
+      "ability": { "type": "discard_to_heal", "discard_amount": 2, "heal_amount": 1 }
+    },
+    "slab_thekiller": {
+      "id": "slab_thekiller",
+      "name": "Slab the Killer",
+      "description": {
+        "en": "Players need 2 'Missed!' cards to avoid his 'Bang!'.",
+        "it": "I giocatori hanno bisogno di 2 'Mancato!' per schivare un suo 'Bang!'."
+      },
+      "life_points": 4,
+      "ability": { "type": "missed_multiplier", "missed_required": 2 }
+    },
+    "suzy_lafayette": {
+      "id": "suzy_lafayette",
+      "name": "Suzy Lafayette",
+      "description": {
+        "en": "When her hand is empty, she immediately draws a card from the deck.",
+        "it": "Quando ha la mano vuota, pesca immediatamente una carta dal mazzo."
+      },
+      "life_points": 4,
+      "ability": { "type": "draw_on_empty_hand", "amount": 1 }
+    },
+    "vulture_sam": {
+      "id": "vulture_sam",
+      "name": "Vulture Sam",
+      "description": {
+        "en": "When a player dies, he takes all their cards from their hand and in play.",
+        "it": "Quando un giocatore muore, prende tutte le sue carte dalla mano e dal tavolo."
+      },
+      "life_points": 4,
+      "ability": { "type": "steal_on_death", "source": "dead_player_all_cards" }
+    },
+    "willy_thekid": {
+      "id": "willy_thekid",
+      "name": "Willy the Kid",
+      "description": {
+        "en": "He can play any number of 'Bang!' cards in his turn.",
+        "it": "Può giocare un numero illimitato di carte 'Bang!' durante il suo turno."
+      },
+      "life_points": 4,
+      "ability": { "type": "unlimited_bangs" }
+    }
+}

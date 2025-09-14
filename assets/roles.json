@@ -1,0 +1,38 @@
+{
+    "sheriff": {
+      "id": "sheriff",
+      "name": { "en": "Sheriff", "it": "Sceriffo" },
+      "description": {
+        "en": "The Sheriff must eliminate all outlaws and the renegade. He starts with one more life point than other players.",
+        "it": "Lo Sceriffo deve eliminare tutti i Fuorilegge e il Rinnegato. Inizia la partita con un punto vita in più."
+      },
+      "is_public": true
+    },
+    "outlaw": {
+      "id": "outlaw",
+      "name": { "en": "Outlaw", "it": "Fuorilegge" },
+      "description": {
+        "en": "The Outlaws must eliminate the Sheriff. They win only if the Sheriff is dead, regardless of other players' roles.",
+        "it": "I Fuorilegge devono eliminare lo Sceriffo. Vincono solo se lo Sceriffo è morto, indipendentemente dagli altri ruoli."
+      },
+      "is_public": false
+    },
+    "vice": {
+      "id": "vice",
+      "name": { "en": "Deputy", "it": "Vice" },
+      "description": {
+        "en": "The Deputies must protect the Sheriff and eliminate the outlaws and the renegade. They win if the Sheriff wins.",
+        "it": "I Vicesceriffo devono proteggere lo Sceriffo ed eliminare i Fuorilegge e il Rinnegato. Vincono se vince lo Sceriffo."
+      },
+      "is_public": false
+    },
+    "renegade": {
+      "id": "renegade",
+      "name": { "en": "Renegade", "it": "Rinnegato" },
+      "description": {
+        "en": "The Renegade's goal is to be the last player alive. He wins if all other players are dead and he is the only one remaining.",
+        "it": "L'obiettivo del Rinnegato è essere l'ultimo giocatore in vita. Vince se tutti gli altri giocatori sono morti e lui è l'unico rimasto."
+      },
+      "is_public": false
+    }
+}

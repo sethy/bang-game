@@ -1,0 +1,48 @@
+{
+"name": "Bang",
+"short_name": "Bang",
+"start_url": "/bang-game/",
+"display": "standalone",
+"description": "Bang game for my friends only",
+"lang": "italian",
+"dir": "auto",
+"theme_color": "#000000",
+"background_color": "#000000",
+"orientation": "portrait",
+"icons": [
+    {
+        "src": "icon_512.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "maskable"
+    },
+    {
+        "src": "icon_192.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "purpose": "any"
+    }
+],
+"screenshots": [
+    {
+        "src": "screenshot.png",
+        "sizes": "560x1154",
+        "type": "image/png",
+        "description": "A screenshot of the home page"
+    }
+],
+"related_applications": [
+    {
+        "platform":"mobile",
+        "url": " The URL to your app in that app store"
+    }
+],
+"prefer_related_applications": false,
+"shortcuts": [
+    {
+        "name":"The name you would like to be displayed for your shortcut",
+        "url":"The url you would like to open when the user chooses this shortcut. This must be a URL local to your PWA. For example: If my start_url is /, this URL must be something like /shortcut",
+        "description":"A description of the functionality of this shortcut"
+    }
+]
+}

@@ -1,0 +1,396 @@
+{
+  "remington": {
+    "id": "remington",
+    "name": { "en": "Remington", "it": "Remington" },
+    "type": "equipaggiamento",
+    "subtype": "arma",
+    "description": { "en": "Increases your range to 3.", "it": "Aumenta il tuo raggio d'azione a 3." },
+    "seed": "fiori",
+    "value": "K",
+    "showEffect": true,
+    "effect": {
+      "type": "range_modifier",
+      "range": 3
+    }
+  },
+  "carabine": {
+    "id": "carabine",
+    "name": { "en": "Rev. Carabine", "it": "Rev. Carabine" },
+    "type": "equipaggiamento",
+    "subtype": "arma",
+    "description": { "en": "Increases your range to 4.", "it": "Aumenta il tuo raggio d'azione a 4." },
+    "seed": "fiori",
+    "value": "A",
+    "showEffect": true,
+    "effect": {
+      "type": "range_modifier",
+      "range": 4
+    }
+  },
+  "schofield": {
+    "id": "schofield",
+    "name": { "en": "Schofield", "it": "Schofield" },
+    "type": "equipaggiamento",
+    "subtype": "arma",
+    "description": { "en": "Increases your range to 2.", "it": "Aumenta il tuo raggio d'azione a 2." },
+    "nCards": [
+      { "seed": "fiori", "value": "J" },
+      { "seed": "fiori", "value": "Q" },
+      { "seed": "picche", "value": "K" }
+    ],
+    "seed": "fiori",
+    "value": "J",
+    "showEffect": true,
+    "effect": {
+      "type": "range_modifier",
+      "range": 2
+    }
+  },
+  "volcanic": {
+    "id": "volcanic",
+    "name": { "en": "Volcanic", "it": "Volcanic" },
+    "type": "equipaggiamento",
+    "subtype": "arma",
+    "description": {
+      "en": "You can play any number of Bang cards.",
+      "it": "Puoi giocare un numero illimitato di Bang."
+    },
+    "seed": "cuori",
+    "value": "10",
+    "nCards": [
+      { "seed": "picche", "value": "10" },
+      { "seed": "fiori", "value": "10" }
+    ],
+    "showEffect": true,
+    "effect": {
+      "type": "range_and_bang_modifier",
+      "range": 1,
+      "bang_limit": "unlimited"
+    }
+  },
+  "winchester": {
+    "id": "winchester",
+    "name": { "en": "Winchester", "it": "Winchester" },
+    "type": "equipaggiamento",
+    "subtype": "arma",
+    "description": { "en": "Increases your range to 5.", "it": "Aumenta il tuo raggio d'azione a 5." },
+    "seed": "picche",
+    "value": "8",
+    "showEffect": true,
+    "effect": {
+      "type": "range_modifier",
+      "range": 5
+    }
+  },
+  "barile": {
+    "id": "barile",
+    "name": { "en": "Barrel", "it": "Barile" },
+    "type": "equipaggiamento",
+    "subtype": "block",
+    "description": {
+      "en": "Each time you are targeted by a Bang, draw a card. If it's a Heart, the attack is Missed.",
+      "it": "Ogni volta che subisci un Bang, pesca una carta: se è Cuori, l'attacco è schivato."
+    },
+    "nCards": [
+      { "seed": "picche", "value": "Q" },
+      { "seed": "picche", "value": "K" }
+    ],
+    "seed": "fiori",
+    "value": "K",
+    "showEffect": true,
+    "effect": {
+      "type": "block",
+      "trigger_card": "bang",
+      "action": { "type": "draw_and_check", "seed_required": "cuori" }
+    }
+  },
+  "dinamite": {
+    "id": "dinamite",
+    "name": { "en": "Dynamite", "it": "Dinamite" },
+    "type": "equipaggiamento",
+    "subtype": "dinamite",
+    "description": {
+      "en": "At the start of your turn, draw a card. If it's a Spade between 2-9, it explodes, and you lose 3 life points. Otherwise, it passes to the next player.",
+      "it": "All'inizio del tuo turno, pesca una carta: se è un Picche con valore tra 2 e 9, esplode, togliendoti 3 vite. Altrimenti, passa al prossimo giocatore."
+    },
+    "seed": "cuori",
+    "value": "2",
+    "showEffect": true,
+    "effect": {
+      "type": "dynamite_effect",
+      "condition": "start_of_turn",
+      "action": {
+        "type": "draw_and_check",
+        "seed_required": "picche",
+        "value_range_required": [2, 9],
+        "on_success": { "type": "damage", "amount": 3 },
+        "on_failure": "pass_to_next_player"
+      }
+    }
+  },
+  "mirino": {
+    "id": "mirino",
+    "name": { "en": "Scope", "it": "Mirino" },
+    "type": "equipaggiamento",
+    "subtype": "speciale",
+    "description": { "en": "You see all other players at a distance of -1.", "it": "Vedi tutti gli altri giocatori a distanza -1." },
+    "seed": "picche",
+    "value": "A",
+    "effect": {
+      "type": "range_modifier",
+      "range": -1
+    }
+  },
+  "mustang": {
+    "id": "mustang",
+    "name": { "en": "Mustang", "it": "Mustang" },
+    "type": "equipaggiamento",
+    "subtype": "speciale",
+    "description": { "en": "All other players see you at a distance of +1.", "it": "Tutti gli altri giocatori ti vedono a distanza +1." },
+    "nCards": [
+      { "seed": "cuori", "value": "8" },
+      { "seed": "cuori", "value": "9" }
+    ],
+    "seed": "cuori",
+    "value": "K",
+    "effect": {
+      "type": "range_modifier",
+      "distance": 1
+    }
+  },
+  "prigione": {
+    "id": "prigione",
+    "name": { "en": "Jail", "it": "Prigione" },
+    "type": "equipaggiamento",
+    "subtype": "prigione",
+    "description": {
+      "en": "Place on a player. At the start of their turn, they must draw a card. If it's a Heart, they are free. Otherwise, they lose their turn and discard Jail.",
+      "it": "Metti su un giocatore. All'inizio del suo turno, deve pescare una carta: se è un Cuori, si libera e il turno prosegue; altrimenti, salta il turno e scarta la Prigione."
+    },
+    "seed": "fiori",
+    "value": "10",
+    "nCards": [
+      { "seed": "picche", "value": "J" },
+      { "seed": "cuori", "value": "4" },
+      { "seed": "picche", "value": "10" }
+    ],
+    "showEffect": true,
+    "effect": {
+      "type": "jail_effect",
+      "condition": "start_of_turn",
+      "action": {
+        "type": "draw_and_check",
+        "seed_required": "cuori",
+        "on_success": "continue_turn",
+        "on_failure": "end_turn"
+      }
+    }
+  },
+  "bang": {
+    "id": "bang",
+    "name": { "en": "Bang", "it": "Bang" },
+    "type": "azione",
+    "description": { "en": "Shoot a player within your range to remove one life point.", "it": "Spara a un giocatore nel tuo raggio d'azione per fargli perdere una vita." },
+    "seed": "picche",
+    "value": "8",
+    "nCards": [
+      { "seed": "picche", "value": "A" },
+      { "seed": "quadri", "rangeValue": "2-A" },
+      { "seed": "fiori", "rangeValue": "2-9" },
+      { "seed": "cuori", "rangeValue": "Q-A" }
+    ],
+    "showEffect": true,
+    "effect": {
+      "type": "damage",
+      "amount": 1,
+      "target": "target_player"
+    }
+  },
+  "birra": {
+    "id": "birra",
+    "name": { "en": "Beer", "it": "Birra" },
+    "type": "azione",
+    "description": { "en": "Regain one life point. Cannot be played to save yourself from a final blow.", "it": "Recuperi una vita. Non può essere giocata per salvarti da un colpo di grazia." },
+    "seed": "cuori",
+    "value": "7",
+    "nCards": [{ "seed": "cuori", "rangeValue": "6-J" }],
+    "showEffect": true,
+    "effect": {
+      "type": "heal",
+      "amount": 1,
+      "target": "self",
+      "restriction": "not_final_blow"
+    }
+  },
+  "cat_balou": {
+    "id": "cat_balou",
+    "name": { "en": "Cat Balou", "it": "Cat Balou" },
+    "type": "azione",
+    "description": {
+      "en": "Choose a player and force them to discard one card from their hand or in play.",
+      "it": "Scegli un giocatore e fagli scartare una carta dalla mano o dal tavolo."
+    },
+    "seed": "cuori",
+    "value": "K",
+    "nCards": [
+      { "seed": "cuori", "value": "K" },
+      { "seed": "quadri", "rangeValue": "9-J" }
+    ],
+    "showEffect": true,
+    "effect": {
+      "type": "discard_card",
+      "source": "any_player_or_table",
+      "amount": 1,
+      "target": "target_card"
+    }
+  },
+  "diligenza": {
+    "id": "diligenza",
+    "name": { "en": "Stagecoach", "it": "Diligenza" },
+    "type": "azione",
+    "description": { "en": "Draw 2 cards from the deck.", "it": "Pesca 2 carte dal mazzo." },
+    "seed": "picche",
+    "value": "9",
+    "nCards": [
+      { "seed": "picche", "value": "2" },
+      { "seed": "picche", "value": "2" }
+    ],
+    "showEffect": true,
+    "effect": {
+      "type": "draw_cards",
+      "amount": 2
+    }
+  },
+  "duello": {
+    "id": "duello",
+    "name": { "en": "Duel", "it": "Duello" },
+    "type": "azione",
+    "description": {
+      "en": "Challenge a player to a duel. You take turns playing Bang cards until one player cannot. The player who fails loses a life point.",
+      "it": "Sfidalo a duello. Vi alternate a giocare Bang finché uno dei due non ha più Bang L'ultimo che non ha giocato perde una vita."
+    },
+    "seed": "fiori",
+    "value": "Q",
+    "nCards": [
+      { "seed": "quadri", "value": "Q" },
+      { "seed": "picche", "value": "J" },
+      { "seed": "fiori", "value": "8" }
+    ],
+    "effect": {
+      "type": "duel",
+      "required_card": "bang",
+      "loser_effect": { "type": "damage", "amount": 1 }
+    }
+  },
+  "emporio": {
+    "id": "emporio",
+    "name": { "en": "General Store", "it": "Emporio" },
+    "type": "azione",
+    "description": { "en": "Flip as many cards as there are players. Each player, starting with you, takes one.", "it": "Gira tante carte quante sono i giocatori. Ognuno, a partire da te, ne prende una." },
+    "seed": "quadri",
+    "value": "9",
+    "nCards": [
+      { "seed": "fiori", "value": "9" },
+      { "seed": "picche", "value": "Q" }
+    ],
+    "effect": {
+      "type": "general_store",
+      "amount": "num_players"
+    }
+  },
+  "gatling": {
+    "id": "gatling",
+    "name": { "en": "Gatling", "it": "Gatling" },
+    "type": "azione",
+    "description": { "en": "All other players must lose one life point. Counts as a Bang", "it": "Tutti gli altri giocatori perdono una vita. Conta come un Bang." },
+    "seed": "cuori",
+    "value": "10",
+    "showEffect": true,
+    "effect": {
+      "type": "damage",
+      "amount": 1,
+      "target": "all_players",
+      "is_bang": true
+    }
+  },
+  "indiani": {
+    "id": "indiani",
+    "name": { "en": "Indians", "it": "Indiani" },
+    "type": "azione",
+    "description": { "en": "All other players must play a Bang card or lose one life point.", "it": "Tutti gli altri giocatori devono scartare un Bang o perdere una vita." },
+    "seed": "quadri",
+    "value": "K",
+    "nCards": [
+      { "seed": "quadri", "value": "K" },
+      { "seed": "quadri", "value": "A" }
+    ],
+    "showEffect": true,
+    "effect": {
+      "type": "all_players_bang",
+      "on_failure": { "type": "damage", "amount": 1 }
+    }
+  },
+  "mancato": {
+    "id": "mancato",
+    "name": { "en": "Missed", "it": "Mancato" },
+    "type": "risposta",
+    "description": { "en": "Play this card in response to a Bang to avoid the hit.", "it": "Gioca questa carta in risposta a un Bang per schivare il colpo." },
+    "seed": "fiori",
+    "value": "9",
+    "nCards": [
+      { "seed": "fiori", "rangeValue": "10-A" },
+      { "seed": "picche", "rangeValue": "2-8" }
+    ],
+    "showEffect": true,
+    "effect": {
+      "type": "block",
+      "target_card": "bang"
+    }
+  },
+  "panico": {
+    "id": "panico",
+    "name": { "en": "Panic", "it": "Panico" },
+    "type": "azione",
+    "description": { "en": "Take one card from a player at range 1, from their hand or in play.", "it": "Ruba una carta dalla mano o dal tavolo di un giocatore nel raggio 1." },
+    "seed": "quadri",
+    "value": "J",
+    "nCards": [
+      { "seed": "cuori", "rangeValue": "J-Q" },
+      { "seed": "cuori", "value": "A" },
+      { "seed": "quadri", "value": "8" }
+    ],
+    "showEffect": true,
+    "effect": {
+      "type": "steal_card",
+      "range": 1,
+      "target": "target_player"
+    }
+  },
+  "saloon": {
+    "id": "saloon",
+    "name": { "en": "Saloon", "it": "Saloon" },
+    "type": "azione",
+    "description": { "en": "All players regain one life point.", "it": "Tutti i giocatori recuperano una vita." },
+    "seed": "cuori",
+    "value": "5",
+    "showEffect": true,
+    "effect": {
+      "type": "heal",
+      "amount": 1,
+      "target": "all_players"
+    }
+  },
+  "wells_fargo": {
+    "id": "wells_fargo",
+    "name": { "en": "Wells Fargo", "it": "Wells Fargo" },
+    "type": "azione",
+    "description": { "en": "Draw 3 cards from the deck.", "it": "Pesca 3 carte dal mazzo." },
+    "seed": "cuori",
+    "value": "3",
+    "showEffect": true,
+    "effect": {
+      "type": "draw_cards",
+      "amount": 3
+    }
+  }
+}
