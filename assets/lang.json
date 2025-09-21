@@ -28,7 +28,9 @@
         "draw_extra_on_seed": "Draw 2 cards and if the second card is Hearts or Diamonds, draw an extra card",
         "draw_from_hand": "You can draw his first card from a player's hand and the second from the deck",
         "draw_and_discard": "Chooses 2 cards to keep",
-        "draw_from_discard_pile": "You can draw his first card from the discard pile and the second from the deck"
+        "draw_from_discard_pile": "You can draw his first card from the discard pile and the second from the deck",
+        "victory_messagge": "The winner is",
+        "replay": "Replay"
     },
     "it": {
         "room": "Stanza",
@@ -59,6 +61,8 @@
         "draw_extra_on_seed": "Pesca 2 carte se la seconda carte è cuori o quadri e ne pesca una in più",
         "draw_from_hand": "Puoi pescare la prima carta dalla mano di un giocatore a tua scelta e la seconda dal mazzo",
         "draw_and_discard": "Scegli 2 carte da tenere",
-        "draw_from_discard_pile": "Puoi pescare la prima carta dalla pila degli scarti e la seconda dal mazzo"
+        "draw_from_discard_pile": "Puoi pescare la prima carta dalla pila degli scarti e la seconda dal mazzo",
+        "victory_messagge": "Il vincitore è",
+        "replay": "Rigioca"
     }
 }
